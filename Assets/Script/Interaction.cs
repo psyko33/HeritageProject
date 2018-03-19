@@ -1,27 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Interaction : MonoBehaviour {
+public class Interaction : MonoBehaviour
 
-    public GameObject USBKey;
+{
+    public USB_Scriptable USB;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    void InteractObjectUSB()
+    private void Start()
     {
-        if (Input.GetKeyDown("e"))
-        {
-            Destroy(gameObject);
-        }
         
     }
 }
