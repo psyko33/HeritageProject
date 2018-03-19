@@ -4,53 +4,53 @@ using UnityEngine;
 
 public class ActiverCrochetage : MonoBehaviour {
 
+    public Crochetage crochetage;
+
     public GameObject playerCamera;
     public GameObject player;
     public GameObject cameraSerrure;
+    public GameObject serrure;
 
-    private bool IsUnlocked;
-    private bool CanOpen;
+    private bool IsOpen;
 
 	// Use this for initialization
 	void Start ()
     {
-        IsUnlocked = false;
-        CanOpen = false;
+        IsOpen = false;
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        Unlocked();
         ExitLockPick();
 	}
 
     void OnTriggerStay ( Collider other )
     {
-       if (other.gameObject.tag == "Player" && Input.GetKeyDown("e"))
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown("e") && IsOpen == false)
         {
+            serrure.SetActive(true);
             playerCamera.SetActive(false);
             player.SetActive(false);
             cameraSerrure.SetActive(true);
-            IsUnlocked = true;
+            crochetage.Spam();
+            
         } 
-    }
-
-    void Unlocked()
-    {
-        if (IsUnlocked == true && Input.GetKeyDown("a"))
-            Debug.Log("CHEST OPEN");
-            CanOpen = true;
     }
 
     void ExitLockPick()
     {
+        bool CanOpen = crochetage.CanOpen;
+
         if (CanOpen == true && Input.GetKeyDown("r"))
         {
+            Cursor.visible = false;
             player.SetActive(true);
             playerCamera.SetActive(true);
             cameraSerrure.SetActive(false);
+            serrure.SetActive(false);
             CanOpen = false;
+            IsOpen = true;
         }
     }
 }
