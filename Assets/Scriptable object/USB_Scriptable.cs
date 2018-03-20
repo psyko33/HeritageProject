@@ -10,12 +10,11 @@ public class USB_Scriptable : ScriptableObject
 
     [Header("Generic")]
     public string USB_Name;
-    public string USB_Text;
-    
+    public string Scenario_Text;
 
     public void Print ()
     {
-        Debug.Log(USB_Name + ": " + USB_Text);
+       // Debug.Log(Scenario_Text);
     }
    
 }

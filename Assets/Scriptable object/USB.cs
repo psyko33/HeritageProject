@@ -5,21 +5,32 @@ using UnityEngine.UI;
 
 public class USB : MonoBehaviour {
 
-    public USB_Scriptable USB01;
 
-    public GameObject Scenario; 
+    public USB_Scriptable USBKey;
+
+    public Text Scenario;
+    public GameObject tuto;
+    public GameObject afficherIcone;
 
     void Start ()
     {
-        //Scenario.gameObject = 
-        USB01.Print();
-	}
-
-   /* void OnTriggerStay(Collider other)
+        
+        afficherIcone.SetActive(false);
+        
+    }
+    
+    void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player" && Input.GetKeyDown("e"))
+        tuto.SetActive(true);
+
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown("e") )
         {
+            
+            gameObject.SetActive(false);
+            Game_Manager.s_Singleton.ObtenirCle();
+            UI_Manager.s_Singleton.AfficherUsbIcon(USBKey);
+            tuto.SetActive(false);
 
         }
-    } */
+    } 
 }

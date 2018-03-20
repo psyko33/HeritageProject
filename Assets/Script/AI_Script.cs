@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class AI_Script : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject tutoRobot;
+    
+    
+	void Start ()
+    {
 		
 	}
 	
@@ -13,4 +16,24 @@ public class AI_Script : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (Game_Manager.s_Singleton.AiCle() && other.gameObject.tag == "Player")
+        {
+            tutoRobot.SetActive(true);
+        } 
+      
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown("e") && Game_Manager.s_Singleton.AiCle())
+        {
+            
+            UI_Manager.s_Singleton.MasquerUsbIcon();
+            tutoRobot.SetActive(false);
+        }
+    }
 }
