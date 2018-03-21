@@ -6,6 +6,7 @@ public class Game_Manager : MonoBehaviour {
 
 
     private bool JaiCle = false;
+    public bool IsPaused;
 
 
     public static Game_Manager s_Singleton;
@@ -23,12 +24,13 @@ public class Game_Manager : MonoBehaviour {
     }
 
     void Start () {
-		
+        Time.timeScale = 1;
+        IsPaused = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        ActiverPauseUI();
 	}
 
     public void ObtenirCle ()
@@ -46,4 +48,20 @@ public class Game_Manager : MonoBehaviour {
         return JaiCle;
     }
 
+    void ActiverPauseUI()
+    {
+        if ( Input.GetKeyDown(KeyCode.P))
+        {
+            if (!IsPaused)
+            {
+                UI_Manager.s_Singleton.AfficherUIPause();
+                IsPaused = true;
+            }
+
+           else if(IsPaused)
+            {
+                UI_Manager.s_Singleton.QuitterPauseUI();
+            }
+        }
+    }
 }

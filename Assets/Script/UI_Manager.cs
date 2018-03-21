@@ -16,6 +16,8 @@ public class UI_Manager : MonoBehaviour {
     public GameObject verrou;
     public GameObject crochet;
 
+    public GameObject pauseUI;
+
     public static UI_Manager s_Singleton;
 
     void Awake()
@@ -80,5 +82,25 @@ public class UI_Manager : MonoBehaviour {
     public void MenuQuitButton()
     {
         Application.Quit();
+    }
+
+    public void AfficherUIPause()
+    {
+        pauseUI.SetActive(true);
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    public void QuitterPauseUI()
+    {
+        Game_Manager.s_Singleton.IsPaused = false;
+        pauseUI.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+   public void RepartirMenu()
+    {
+        SceneManager.LoadScene("Scene_Menu");
+
     }
 }

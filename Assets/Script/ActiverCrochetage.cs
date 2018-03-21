@@ -31,10 +31,9 @@ public class ActiverCrochetage : MonoBehaviour {
             playerCamera.SetActive(false);
             player.SetActive(false);
             cameraSerrure.SetActive(true);
-            Cursor.visible = false;
             UI_Manager.s_Singleton.ActiverUICrochetage();
             crochetage.LockPick();
-
+            Cursor.visible = false;
         } 
     }
     void OnTriggerEnter(Collider other)
@@ -57,7 +56,9 @@ public class ActiverCrochetage : MonoBehaviour {
             Cursor.visible = false;
             Debug.Log("crochetage fini");
         }
+
         if (CanOpen == true)
             UI_Manager.s_Singleton.FermerTutoUICrochetage();
     }
 }
+    
