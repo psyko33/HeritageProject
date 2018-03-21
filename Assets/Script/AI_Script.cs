@@ -36,4 +36,10 @@ public class AI_Script : MonoBehaviour {
             tutoRobot.SetActive(false);
         }
     }
+
+    public void DeplacementAI ()
+    {
+
+    }
+
 }
