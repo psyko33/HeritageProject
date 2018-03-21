@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour {
 
@@ -11,7 +12,6 @@ public class UI_Manager : MonoBehaviour {
     public Text Story;
     private string CleTexte;
 
- 
     public GameObject tutoPressE;
     public GameObject verrou;
     public GameObject crochet;
@@ -31,14 +31,11 @@ public class UI_Manager : MonoBehaviour {
     }
   
     void Start ()
-    {
-		
+    { 	
 	}
-	
-	// Update is called once per frame
+
 	void Update ()
     {
-		
 	}
 
     public void AfficherUsbIcon (USB_Scriptable currentKey)
@@ -74,5 +71,14 @@ public class UI_Manager : MonoBehaviour {
     public void FermerTutoUICrochetage()
     {
         tutoPressE.SetActive(false);
+    }
+
+    public void MenuPlayButton()
+    {
+        SceneManager.LoadScene("Scene_Kevin");
+    }
+    public void MenuQuitButton()
+    {
+        Application.Quit();
     }
 }
