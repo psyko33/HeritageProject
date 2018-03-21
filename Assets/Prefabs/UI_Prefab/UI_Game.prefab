@@ -643,6 +643,7 @@ MonoBehaviour:
   tutoPressE: {fileID: 0}
   verrou: {fileID: 0}
   crochet: {fileID: 0}
+  pauseUI: {fileID: 0}
 --- !u!222 &222085922204951088
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -61,7 +61,7 @@ public class AI_Script : MonoBehaviour {
     {
         if (wavePointIndex >= WayPoints.points.Length - 1)
         {
-            speed = 0f;
+            speed = 0f;            
             return;
         }
         wavePointIndex++;
