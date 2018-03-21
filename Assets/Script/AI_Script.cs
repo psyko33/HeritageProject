@@ -41,6 +41,11 @@ public class AI_Script : MonoBehaviour {
         }
     }
 
+    public void OnTriggerExit(Collider other)
+    {
+        tutoRobot.SetActive(false);
+    }
+
     void DeplacementAI ()
     {
         Vector3 dir = target.position - transform.position;

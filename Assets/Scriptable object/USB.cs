@@ -32,5 +32,10 @@ public class USB : MonoBehaviour {
             tuto.SetActive(false);
 
         }
-    } 
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        tuto.SetActive(false);
+    }
 }
