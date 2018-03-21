@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1462144054700758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64107, y: 1.5340743, z: 10.09}
+  m_LocalPosition: {x: 7.41, y: 0.9, z: 8.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutoRobot: {fileID: 0}
+  speed: 6
 --- !u!136 &136591981881425854
 CapsuleCollider:
   m_ObjectHideFlags: 1

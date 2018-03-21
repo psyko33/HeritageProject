@@ -5,17 +5,21 @@ using UnityEngine;
 public class AI_Script : MonoBehaviour {
 
     public GameObject tutoRobot;
-    
-    
-	void Start ()
+    public float speed = 10f;
+
+    private Transform target;
+    private int wavePointIndex = 0;
+
+    void Start()
     {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        target = WayPoints.points[0];
+    }
+
+    void Update()
+    {
+        DeplacementAI();
+
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -37,9 +41,25 @@ public class AI_Script : MonoBehaviour {
         }
     }
 
-    public void DeplacementAI ()
+    void DeplacementAI ()
     {
+        Vector3 dir = target.position - transform.position;
+        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
+        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+        {
+            GetNextWaypoint();
+        }
     }
 
+    void GetNextWaypoint()
+    {
+        if (wavePointIndex >= WayPoints.points.Length - 1)
+        {
+            speed = 0f;
+            return;
+        }
+        wavePointIndex++;
+        target = WayPoints.points[wavePointIndex];
+    }
 }
