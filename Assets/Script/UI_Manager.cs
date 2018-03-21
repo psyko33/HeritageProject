@@ -7,8 +7,14 @@ public class UI_Manager : MonoBehaviour {
 
     public GameObject USB_Icon;
     public GameObject Panel_Story;
+   
     public Text Story;
     private string CleTexte;
+
+ 
+    public GameObject tutoPressE;
+    public GameObject verrou;
+    public GameObject crochet;
 
     public static UI_Manager s_Singleton;
 
@@ -46,5 +52,27 @@ public class UI_Manager : MonoBehaviour {
         USB_Icon.SetActive(false);
         Panel_Story.SetActive(true);
         Story.text = CleTexte;
+    }
+
+    public void ActiverUICrochetage()
+    {
+        tutoPressE.SetActive(false);
+        verrou.SetActive(true);
+        crochet.SetActive(true);
+    }
+
+    public void FermerUICrochetage()
+    {
+        verrou.SetActive(false);
+        crochet.SetActive(false);
+    }
+
+    public void ActiverTutoUICrochetage()
+    {
+        tutoPressE.SetActive(true);
+    }
+    public void FermerTutoUICrochetage()
+    {
+        tutoPressE.SetActive(false);
     }
 }

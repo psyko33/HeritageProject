@@ -1,22 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActiverCrochetage : MonoBehaviour {
 
     public Crochetage crochetage;
 
     public GameObject playerCamera;
-    public GameObject player;
     public GameObject cameraSerrure;
-    public GameObject serrure;
-
-    private bool IsOpen;
+    public GameObject player;
 
 	// Use this for initialization
 	void Start ()
     {
-        IsOpen = false;
+  
+
     }
 	
 	// Update is called once per frame
@@ -27,30 +26,38 @@ public class ActiverCrochetage : MonoBehaviour {
 
     void OnTriggerStay ( Collider other )
     {
-        if (other.gameObject.tag == "Player" && Input.GetKeyDown("e") && IsOpen == false)
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown("e"))
         {
-            serrure.SetActive(true);
             playerCamera.SetActive(false);
             player.SetActive(false);
             cameraSerrure.SetActive(true);
-            crochetage.Spam();
-            
+            Cursor.visible = false;
+            UI_Manager.s_Singleton.ActiverUICrochetage();
+            crochetage.LockPick();
+
         } 
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        UI_Manager.s_Singleton.ActiverTutoUICrochetage();
+
     }
 
     void ExitLockPick()
     {
         bool CanOpen = crochetage.CanOpen;
-
+ 
         if (CanOpen == true && Input.GetKeyDown("r"))
         {
-            Cursor.visible = false;
+            cameraSerrure.SetActive(false);
             player.SetActive(true);
             playerCamera.SetActive(true);
-            cameraSerrure.SetActive(false);
-            serrure.SetActive(false);
-            CanOpen = false;
-            IsOpen = true;
+            UI_Manager.s_Singleton.FermerUICrochetage();
+            Cursor.visible = false;
+            Debug.Log("crochetage fini");
         }
+        if (CanOpen == true)
+            UI_Manager.s_Singleton.FermerTutoUICrochetage();
     }
 }
