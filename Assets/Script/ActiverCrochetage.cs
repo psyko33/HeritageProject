@@ -14,8 +14,6 @@ public class ActiverCrochetage : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-  
-
     }
 	
 	// Update is called once per frame
@@ -28,12 +26,12 @@ public class ActiverCrochetage : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player" && Input.GetKeyDown("e"))
         {
-            playerCamera.SetActive(false);
             player.SetActive(false);
             cameraSerrure.SetActive(true);
             UI_Manager.s_Singleton.ActiverUICrochetage();
             crochetage.LockPick();
-            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         } 
     }
     void OnTriggerEnter(Collider other)

@@ -13,8 +13,6 @@ public class UI_Manager : MonoBehaviour {
     private string CleTexte;
 
     public GameObject tutoPressE;
-    public GameObject verrou;
-    public GameObject crochet;
 
     public GameObject pauseUI;
 
@@ -34,6 +32,7 @@ public class UI_Manager : MonoBehaviour {
   
     void Start ()
     { 	
+
 	}
 
 	void Update ()
@@ -56,14 +55,10 @@ public class UI_Manager : MonoBehaviour {
     public void ActiverUICrochetage()
     {
         tutoPressE.SetActive(false);
-        verrou.SetActive(true);
-        crochet.SetActive(true);
     }
 
     public void FermerUICrochetage()
     {
-        verrou.SetActive(false);
-        crochet.SetActive(false);
     }
 
     public void ActiverTutoUICrochetage()
