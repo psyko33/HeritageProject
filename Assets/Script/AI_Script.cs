@@ -1,23 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AI_Script : MonoBehaviour {
 
     public GameObject tutoRobot;
-    public float speed = 10f;
+    //public float speed = 10f;
 
-    private Transform target;
-    private int wavePointIndex = 0;
+    // private Transform target;
+    //private int wavePointIndex = 0;
+
+    public Transform nextWayPoint;
+    public float SondeSpeed;
+   
 
     void Start()
     {
-        target = WayPoints.points[0];
+        //target = WayPoints.s_Singleton.points[0];
     }
 
     void Update()
     {
-        DeplacementAI();
+        //DeplacementAITest();
+        DeplacementIA();
 
     }
 
@@ -46,25 +52,44 @@ public class AI_Script : MonoBehaviour {
         tutoRobot.SetActive(false);
     }
 
-    void DeplacementAI ()
-    {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+    /* void DeplacementAITest ()
+     {
+         Vector3 dir = target.position - transform.position;
+         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+         if (Vector3.Distance(transform.position, target.position) <= 0.4f)
+         {
+            // GetNextWaypoint();
+         }
+     }
+
+     void GetNextWaypoint()
+     {
+         if (wavePointIndex >= WayPoints.points.Length - 1)
+         {
+             speed = 0f;            
+             return;
+         }
+         wavePointIndex++;
+         target = WayPoints.s_Singleton.points[wavePointIndex];
+     }*/
+
+    public void DeplacementIA ()
+    {
+        if (transform.position != nextWayPoint.position)
         {
-            GetNextWaypoint();
+            transform.position = Vector3.MoveTowards(transform.position, nextWayPoint.position, SondeSpeed * Time.deltaTime);
         }
     }
 
-    void GetNextWaypoint()
+    public void DefineNextWayPoint (Transform actualWayPoint)
     {
-        if (wavePointIndex >= WayPoints.points.Length - 1)
-        {
-            speed = 0f;            
-            return;
-        }
-        wavePointIndex++;
-        target = WayPoints.points[wavePointIndex];
+        nextWayPoint = Waypoint_Manager.s_Singleton.GetNextWayPoint(actualWayPoint);
     }
+
+    public void DefineNextWayPointFromStop(Transform actualWayPoint)
+    {
+        nextWayPoint = Waypoint_Manager.s_Singleton.GetNextWayPoint(nextWayPoint);
+    }
+
 }

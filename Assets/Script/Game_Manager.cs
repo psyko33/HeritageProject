@@ -7,6 +7,8 @@ public class Game_Manager : MonoBehaviour {
 
     private bool JaiCle = false;
     public bool IsPaused;
+    public bool StopWayPoint;
+    public AI_Script Robot;
 
 
     public static Game_Manager s_Singleton;
@@ -23,7 +25,9 @@ public class Game_Manager : MonoBehaviour {
         }
     }
 
-    void Start () {
+    void Start ()
+    {
+        StopWayPoint = false;
         Time.timeScale = 1;
         IsPaused = false;
 	}
@@ -65,5 +69,8 @@ public class Game_Manager : MonoBehaviour {
         }
     }
 
+    public void WayPoint ()
+    {
 
+    }
 }
