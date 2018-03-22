@@ -21,6 +21,7 @@ public class USB : MonoBehaviour {
     
     void OnTriggerStay(Collider other)
     {
+        if (other.gameObject.tag == "Player")
         tuto.SetActive(true);
 
         if (other.gameObject.tag == "Player" && Input.GetKeyDown("e") )
