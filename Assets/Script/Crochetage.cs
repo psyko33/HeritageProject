@@ -6,7 +6,7 @@ public class Crochetage : MonoBehaviour {
 
     public bool CanOpen = false;
 
-    private Rigidbody2D myRb;
+
     private float speed = 2;
 
     private Vector2 direction;
@@ -14,6 +14,7 @@ public class Crochetage : MonoBehaviour {
     // Use this for initialization
     void Start () {
         direction = Vector2.up;
+        
 	}
 	
 	// Update is called once per frame
