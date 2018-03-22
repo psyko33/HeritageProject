@@ -43,7 +43,9 @@ public class AI_Script : MonoBehaviour {
         {
             
             UI_Manager.s_Singleton.MasquerUsbIcon();
+            Game_Manager.s_Singleton.PlusCle();
             tutoRobot.SetActive(false);
+
         }
     }
 
@@ -87,7 +89,7 @@ public class AI_Script : MonoBehaviour {
         nextWayPoint = Waypoint_Manager.s_Singleton.GetNextWayPoint(actualWayPoint);
     }
 
-    public void DefineNextWayPointFromStop(Transform actualWayPoint)
+    public void DefineNextWayPointFromStop()
     {
         nextWayPoint = Waypoint_Manager.s_Singleton.GetNextWayPoint(nextWayPoint);
     }

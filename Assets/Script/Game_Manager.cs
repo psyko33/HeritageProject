@@ -8,7 +8,7 @@ public class Game_Manager : MonoBehaviour {
     private bool JaiCle = false;
     public bool IsPaused;
     public bool StopWayPoint;
-    public AI_Script Robot;
+    public AI_Script Sonde;
 
 
     public static Game_Manager s_Singleton;
@@ -45,6 +45,9 @@ public class Game_Manager : MonoBehaviour {
     public void PlusCle()
     {
         JaiCle = false;
+        Sonde.DefineNextWayPointFromStop();
+
+
     }
 
     public bool AiCle ()
