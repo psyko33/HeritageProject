@@ -7,13 +7,12 @@ public class Crochetage : MonoBehaviour {
     public bool CanOpen = false;
 
     private Rigidbody2D myRb;
-    private float speed = 10;
+    private float speed = 2;
 
     private Vector2 direction;
 
     // Use this for initialization
     void Start () {
-        myRb = gameObject.GetComponent<Rigidbody2D>();
         direction = Vector2.up;
 	}
 	
@@ -21,6 +20,7 @@ public class Crochetage : MonoBehaviour {
 	void FixedUpdate ()
     {
         Deplacements();
+        GetInput();
 
     }
 
@@ -42,7 +42,6 @@ public class Crochetage : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             direction += Vector2.left;
-            // myRb.AddForce(transform.right *-speed);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
