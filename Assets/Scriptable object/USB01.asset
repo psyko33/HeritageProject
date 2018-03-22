@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: USB01
   m_EditorClassIdentifier: 
   USB_Name: First Story
-  Scenario_Text: "     Il y a fort longtemps, une \xE9sp\xE9ce dominante r\xE9gner
-    sur cette planete. Elle vie passer de nombreuse espece qui sont actuellement disparue
-    par sa faute."
+  Scenario_Text: "      Selon cette cl\xE9, il semblerait que nous nous trouvons dans
+    un ancien complexe d\u2019une civilisation pass\xE9e. Il est questions, ici, d\u2019un
+    laboratoire de recherche sur des mutations d\u2019animaux."

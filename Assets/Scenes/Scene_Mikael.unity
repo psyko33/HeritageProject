@@ -593,7 +593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsPaused: 0
   StopWayPoint: 0
-  Robot: {fileID: 1792721676}
+  Sonde: {fileID: 1792721676}
 --- !u!4 &647394123
 Transform:
   m_ObjectHideFlags: 0
