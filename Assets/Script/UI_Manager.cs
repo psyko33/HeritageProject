@@ -12,11 +12,15 @@ public class UI_Manager : MonoBehaviour {
     public Text Story;
     private string CleTexte;
 
-    public GameObject tutoPressE;
+    public GameObject tutoCrochetage;
 
     public GameObject pauseUI;
 
     public static UI_Manager s_Singleton;
+
+    public GameObject RobotIndication;
+    public GameObject Deplacement;
+    public GameObject Saccroupir;
 
     void Awake()
     {
@@ -54,7 +58,7 @@ public class UI_Manager : MonoBehaviour {
 
     public void ActiverUICrochetage()
     {
-        tutoPressE.SetActive(false);
+        tutoCrochetage.SetActive(false);
     }
 
     public void FermerUICrochetage()
@@ -63,11 +67,42 @@ public class UI_Manager : MonoBehaviour {
 
     public void ActiverTutoUICrochetage()
     {
-        tutoPressE.SetActive(true);
+        tutoCrochetage.SetActive(true);
     }
+
     public void FermerTutoUICrochetage()
     {
-        tutoPressE.SetActive(false);
+        tutoCrochetage.SetActive(false);
+    }
+
+    public void TutoDeplacementActiver ()
+    {
+        Deplacement.SetActive(true);
+    }
+
+    public void TutoDeplacementDesactiver()
+    {
+        Deplacement.SetActive(false);
+    }
+
+    public void RobotIndicationActiver ()
+    {
+        RobotIndication.SetActive(true);
+    }
+
+    public void RobotIndicationDesactiver()
+    {
+        RobotIndication.SetActive(false);
+    }
+
+    public void SaccroupirActive ()
+    {
+        Saccroupir.SetActive(true);
+    }
+
+    public void SaccroupirDesactive()
+    {
+        Saccroupir.SetActive(false);
     }
 
     public void MenuPlayButton()
@@ -93,9 +128,6 @@ public class UI_Manager : MonoBehaviour {
         Time.timeScale = 1;
     }
 
-   public void RepartirMenu()
-    {
-        SceneManager.LoadScene("Scene_Menu");
 
-    }
+ 
 }
