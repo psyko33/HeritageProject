@@ -1117,12 +1117,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   USB_Icon: {fileID: 1937818062209110}
   Panel_Story: {fileID: 1170368343811940}
+  ChoixFinalUI: {fileID: 0}
   Story: {fileID: 114343052193178726}
   tutoCrochetage: {fileID: 1457908786106242}
   pauseUI: {fileID: 1996099670933548}
   RobotIndication: {fileID: 1409607032342996}
   Deplacement: {fileID: 1231109746841096}
   Saccroupir: {fileID: 1208075514723586}
+  Feux: {fileID: 0}
+  Explosion: {fileID: 0}
+  sonde: {fileID: 0}
 --- !u!114 &114725915458075426
 MonoBehaviour:
   m_ObjectHideFlags: 1

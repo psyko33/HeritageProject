@@ -8,7 +8,9 @@ public class UI_Manager : MonoBehaviour {
 
     public GameObject USB_Icon;
     public GameObject Panel_Story;
-   
+
+    public GameObject ChoixFinalUI;
+
     public Text Story;
     private string CleTexte;
 
@@ -21,6 +23,11 @@ public class UI_Manager : MonoBehaviour {
     public GameObject RobotIndication;
     public GameObject Deplacement;
     public GameObject Saccroupir;
+
+    public GameObject Feux;
+    public GameObject Explosion;
+    public GameObject sonde;
+
 
     void Awake()
     {
@@ -107,7 +114,11 @@ public class UI_Manager : MonoBehaviour {
 
     public void MenuPlayButton()
     {
-        SceneManager.LoadScene("Scene_Kevin");
+        SceneManager.LoadScene("Scene_Mikael");
+    }
+    public void PauseMenuButton()
+    {
+        SceneManager.LoadScene("Scene_Menu");
     }
     public void MenuQuitButton()
     {
@@ -128,6 +139,25 @@ public class UI_Manager : MonoBehaviour {
         Time.timeScale = 1;
     }
 
+    public void ChoixFinal()
+    {
+        ChoixFinalUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
+    public void Choix1()
+    {
+        Feux.SetActive (true);
+        ChoixFinalUI.SetActive(false);
+    }
+
+    public void Choix2()
+    {
+        Explosion.SetActive(true);
+        sonde.SetActive(false);
+        ChoixFinalUI.SetActive(false);
+
+    }
  
 }
