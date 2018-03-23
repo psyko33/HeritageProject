@@ -2,33 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crochetage : MonoBehaviour {
+public class Crochetage : MonoBehaviour
+{
 
     public bool CanOpen = false;
-
+    private bool triggerOn = false;
 
     private float speed = 2;
 
     private Vector2 direction;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         direction = Vector2.up;
-        
-	}
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         Deplacements();
         GetInput();
+        
 
     }
 
     public void LockPick()
     {
-        CanOpen = true;
-        Debug.Log("crochetage en cours");
+        if (triggerOn == true)
+        {
+            CanOpen = true;
+            Debug.Log("done");
+            triggerOn = false;
+        }
     }
 
     void Deplacements()
@@ -36,7 +43,7 @@ public class Crochetage : MonoBehaviour {
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
-    private void GetInput ()
+    private void GetInput()
     {
         direction = Vector2.zero;
 
@@ -56,5 +63,12 @@ public class Crochetage : MonoBehaviour {
         {
             direction += Vector2.down;
         }
+    }
+
+    public void OnTriggerEnter2D( Collider2D other)
+    {
+        triggerOn = true;
+        Debug.Log("crochetage en cours");
+        LockPick();
     }
 }

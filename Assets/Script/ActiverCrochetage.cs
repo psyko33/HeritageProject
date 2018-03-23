@@ -10,6 +10,7 @@ public class ActiverCrochetage : MonoBehaviour {
     public GameObject playerCamera;
     public GameObject cameraSerrure;
     public GameObject player;
+    public GameObject UI;
 
 	// Use this for initialization
 	void Start ()
@@ -26,12 +27,11 @@ public class ActiverCrochetage : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player" && Input.GetKeyDown("e"))
         {
+            UI.SetActive(true);
             player.SetActive(false);
             cameraSerrure.SetActive(true);
             UI_Manager.s_Singleton.ActiverUICrochetage();
             crochetage.LockPick();
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
         } 
     }
     void OnTriggerEnter(Collider other)
@@ -45,18 +45,20 @@ public class ActiverCrochetage : MonoBehaviour {
     {
         bool CanOpen = crochetage.CanOpen;
  
-        if (CanOpen == true && Input.GetKeyDown("r"))
+        if (CanOpen)
         {
+            UI.SetActive(true);
             cameraSerrure.SetActive(false);
             player.SetActive(true);
             playerCamera.SetActive(true);
             UI_Manager.s_Singleton.FermerUICrochetage();
             Cursor.visible = false;
             Debug.Log("crochetage fini");
+            UI_Manager.s_Singleton.FermerTutoUICrochetage();
+            CanOpen = false;
         }
 
-        if (CanOpen == true)
-            UI_Manager.s_Singleton.FermerTutoUICrochetage();
+            
     }
 }
     
