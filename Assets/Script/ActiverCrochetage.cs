@@ -56,6 +56,7 @@ public class ActiverCrochetage : MonoBehaviour {
             Debug.Log("crochetage fini");
             UI_Manager.s_Singleton.FermerTutoUICrochetage();
             CanOpen = false;
+            gameObject.SetActive(false);
         }
 
             
