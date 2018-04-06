@@ -71,9 +71,4 @@ public class Game_Manager : MonoBehaviour {
             }
         }
     }
-
-    public void WayPoint ()
-    {
-
-    }
 }
