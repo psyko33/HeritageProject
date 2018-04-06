@@ -12,8 +12,23 @@ public class ActiverCrochetage : MonoBehaviour {
     public GameObject player;
     public GameObject UI;
 
-	// Use this for initialization
-	void Start ()
+
+    public static ActiverCrochetage s_Singleton;
+
+    void Awake()
+    {
+        if (s_Singleton != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            s_Singleton = this;
+        }
+    }
+
+    // Use this for initialization
+    void Start ()
     {
     }
 	
@@ -41,7 +56,7 @@ public class ActiverCrochetage : MonoBehaviour {
 
     }
 
-    void ExitLockPick()
+     public  void ExitLockPick()
     {
         bool CanOpen = crochetage.CanOpen;
  

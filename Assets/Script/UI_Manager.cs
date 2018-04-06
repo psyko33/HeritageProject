@@ -18,8 +18,6 @@ public class UI_Manager : MonoBehaviour {
 
     public GameObject pauseUI;
 
-    public static UI_Manager s_Singleton;
-
     public GameObject RobotIndication;
     public GameObject Deplacement;
     public GameObject Saccroupir;
@@ -28,6 +26,7 @@ public class UI_Manager : MonoBehaviour {
     public GameObject Explosion;
     public GameObject sonde;
 
+    public static UI_Manager s_Singleton;
 
     void Awake()
     {
