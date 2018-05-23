@@ -56,7 +56,12 @@ public class ActiverCrochetage : MonoBehaviour {
 
     }
 
-     public  void ExitLockPick()
+    private void OnTriggerExit(Collider other)
+    {
+        UI_Manager.s_Singleton.FermerTutoUICrochetage();
+    }
+
+    public  void ExitLockPick()
     {
         bool CanOpen = crochetage.CanOpen;
  
