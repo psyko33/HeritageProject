@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: USB01
   m_EditorClassIdentifier: 
   USB_Name: First Story
-  Scenario_Text: "      Selon cette cl\xE9, il semblerait que nous nous trouvons dans
-    un ancien complexe d\u2019une civilisation pass\xE9e. Il est questions, ici, d\u2019un
-    laboratoire de recherche sur des mutations d\u2019animaux."
+  Scenario_Text: "\xAB Il y a de cela des milliers d\u2019ann\xE9es, la Terre ne poss\xE9dait
+    qu\u2019un seul satellite naturel et \xE9tait peupl\xE9 de nombreuses cr\xE9atures
+    diff\xE9rentes. Mais \u2026 Tout prit fin quand zzzzzzztttttttt \xBB Excuses moi
+    ??? mais la cl\xE9 est corrompue et tu vas devoir en chercher d\u2019autres pour
+    comprendre la suite de l\u2019histoire."
