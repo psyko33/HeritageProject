@@ -294,8 +294,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1482918, y: 1, z: 1.9861416}
-  m_Center: {x: -0.051013414, y: 0, z: 0.5736438}
+  m_Size: {x: 2.1340036, y: 1.3162085, z: 2.9798481}
+  m_Center: {x: 0.0014136764, y: 0.15810391, z: 1.0704972}
 --- !u!65 &65963337579787590
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -348,6 +348,7 @@ MonoBehaviour:
   cameraSerrure: {fileID: 1533955054444610}
   player: {fileID: 0}
   UI: {fileID: 0}
+  CoffreController: {fileID: 95021091911433966}
 --- !u!124 &124068677070737216
 Behaviour:
   m_ObjectHideFlags: 1

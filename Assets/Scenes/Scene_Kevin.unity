@@ -367,41 +367,6 @@ Prefab:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1702963539}
-    - target: {fileID: 65924867432629448, guid: a59c05dd67dcf21449856d2d48258663,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 2.9798481
-      objectReference: {fileID: 0}
-    - target: {fileID: 65924867432629448, guid: a59c05dd67dcf21449856d2d48258663,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 1.0704972
-      objectReference: {fileID: 0}
-    - target: {fileID: 65924867432629448, guid: a59c05dd67dcf21449856d2d48258663,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.1340036
-      objectReference: {fileID: 0}
-    - target: {fileID: 65924867432629448, guid: a59c05dd67dcf21449856d2d48258663,
-        type: 2}
-      propertyPath: m_Center.x
-      value: 0.0014136764
-      objectReference: {fileID: 0}
-    - target: {fileID: 65924867432629448, guid: a59c05dd67dcf21449856d2d48258663,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 1.3162085
-      objectReference: {fileID: 0}
-    - target: {fileID: 65924867432629448, guid: a59c05dd67dcf21449856d2d48258663,
-        type: 2}
-      propertyPath: m_Center.y
-      value: 0.15810391
-      objectReference: {fileID: 0}
-    - target: {fileID: 114681510106807504, guid: a59c05dd67dcf21449856d2d48258663,
-        type: 2}
-      propertyPath: CoffreController
-      value: 
-      objectReference: {fileID: 1709225954}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a59c05dd67dcf21449856d2d48258663, type: 2}
   m_IsPrefabParent: 0
@@ -793,11 +758,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!95 &1709225954 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95021091911433966, guid: a59c05dd67dcf21449856d2d48258663,
-    type: 2}
-  m_PrefabInternal: {fileID: 540346502}
 --- !u!1001 &1721265473
 Prefab:
   m_ObjectHideFlags: 0
