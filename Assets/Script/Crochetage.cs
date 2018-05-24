@@ -10,8 +10,6 @@ public class Crochetage : MonoBehaviour
 
     private float speed = 2;
 
-    private float time;
-    public float timeReset;
 
     private Vector2 direction;
 
@@ -19,18 +17,13 @@ public class Crochetage : MonoBehaviour
     void Start()
     {
         direction = Vector2.up;
-        time = timeReset;
-
     }
 
     // Update is called once per frame
     void Update()
     {
         Deplacements();
-        GetInput();
-        Timer();
-        
-
+        GetInput();      
     }
 
     public void LockPick()
@@ -40,6 +33,7 @@ public class Crochetage : MonoBehaviour
             CanOpen = true;
             Debug.Log("done");
             triggerOn = false;
+ 
         }
     }
 
@@ -75,15 +69,5 @@ public class Crochetage : MonoBehaviour
         triggerOn = true;
         Debug.Log("crochetage en cours");
         LockPick();
-    }
-
-    void Timer()
-    {
-        time -= Time.deltaTime;
-        if (time <= 0 && triggerOn == false)
-        {
-            ActiverCrochetage.s_Singleton.ExitLockPick();
-        }
-
     }
 }

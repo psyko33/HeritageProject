@@ -11,6 +11,7 @@ public class ActiverCrochetage : MonoBehaviour {
     public GameObject cameraSerrure;
     public GameObject player;
     public GameObject UI;
+    public Animator CoffreController;
 
 
     public static ActiverCrochetage s_Singleton;
@@ -45,20 +46,20 @@ public class ActiverCrochetage : MonoBehaviour {
             UI.SetActive(true);
             player.SetActive(false);
             cameraSerrure.SetActive(true);
-            UI_Manager.s_Singleton.ActiverUICrochetage();
+           // UI_Manager.s_Singleton.ActiverUICrochetage();
             crochetage.LockPick();
         } 
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
-        UI_Manager.s_Singleton.ActiverTutoUICrochetage();
+       // if (other.gameObject.tag == "Player")
+       // UI_Manager.s_Singleton.ActiverTutoUICrochetage();
 
     }
 
     private void OnTriggerExit(Collider other)
     {
-        UI_Manager.s_Singleton.FermerTutoUICrochetage();
+        //UI_Manager.s_Singleton.FermerTutoUICrochetage();
     }
 
     public  void ExitLockPick()
@@ -71,15 +72,13 @@ public class ActiverCrochetage : MonoBehaviour {
             cameraSerrure.SetActive(false);
             player.SetActive(true);
             playerCamera.SetActive(true);
-            UI_Manager.s_Singleton.FermerUICrochetage();
+            //UI_Manager.s_Singleton.FermerUICrochetage();
             Cursor.visible = false;
             Debug.Log("crochetage fini");
-            UI_Manager.s_Singleton.FermerTutoUICrochetage();
+           // UI_Manager.s_Singleton.FermerTutoUICrochetage();
             CanOpen = false;
-            gameObject.SetActive(false);
-        }
-
-            
+            CoffreController.SetBool("CrochetageDone", true);
+        }         
     }
 }
     
