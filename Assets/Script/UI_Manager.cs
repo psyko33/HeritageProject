@@ -22,9 +22,10 @@ public class UI_Manager : MonoBehaviour {
     public GameObject Deplacement;
     public GameObject Saccroupir;
 
-    public GameObject Feux;
-    public GameObject Explosion;
+    public GameObject BadEnd;
+    public GameObject GoodEnd;
     public GameObject sonde;
+
 
     public static UI_Manager s_Singleton;
 
@@ -147,13 +148,13 @@ public class UI_Manager : MonoBehaviour {
 
     public void Choix1()
     {
-        Feux.SetActive (true);
+        BadEnd.SetActive (true);
         ChoixFinalUI.SetActive(false);
     }
 
     public void Choix2()
     {
-        Explosion.SetActive(true);
+        GoodEnd.SetActive(true);
         sonde.SetActive(false);
         ChoixFinalUI.SetActive(false);
 
