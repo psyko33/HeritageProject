@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Name: USB04
   m_EditorClassIdentifier: 
   USB_Name: fourth Story
-  Scenario_Text: Et la j'aime les pates
+  Scenario_Text: "\xAB La soci\xE9t\xE9 ELM, notre sauveur, mais aussi la destructrice.
+    Les exp\xE9riences de ces scientifiques nous ont permis de d\xE9velopper notre
+    intelligence ainsi que de nous immuniser des radiations de leurs plus puissantes
+    armes. Cette arme, le d\xE9but de la fin pour cette esp\xE8ce qui nous a sauv\xE9.
+    \xBB Tout ceci est bien \xE9trange, je ne comprends pas pourquoi cette esp\xE8ce
+    \xE0 \xE9tait d\xE9truite, nous touchons presque au but. "

@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Name: USB03
   m_EditorClassIdentifier: 
   USB_Name: Third Story
-  Scenario_Text: Et la j'aime les pates
+  Scenario_Text: "\xAB Ils y avaient aussi des \xAB animaux \xBB qui \xE9taient beaucoup
+    plus grand que nous et plus fort. Certains pouvaient voler avec des ailes, d\u2019autres
+    pouvaient se tenir parfaitement bien sur leurs deux jambes alors que nous, nous
+    n\u2019y arrivons pas. Du moins \xE0 cette \xE9poque pas encore. La soci\xE9 zzzzzztttttt
+    \xBB La soci\xE9 quoi ? Je pense qu\u2019il parle d\u2019une soci\xE9t\xE9. Allons
+    autre part s\u2019il y a d\u2019autre cl\xE9 USB pour avoir la suite de cette
+    histoire."
