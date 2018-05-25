@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: d9cd683821d10d94b889d85ca94bf1e7
+timeCreated: 1527174184
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Barres_dessus_contenant_0
+    100002: Bouton_01
+    100004: Bouton_02
+    100006: Bouton_03
+    100008: Bouton_04
+    100010: Bouton_05
+    100012: Bouton_06
+    100014: //RootNode
+    100016: Contenant_01
+    100018: Ecran_contenant_01
+    100020: Lampes_contenant_01
+    100022: "M\xE9tal_noir_contenant_01"
+    100024: Pilliers_contenant_01
+    100026: Tube_002
+    100028: Tube_003
+    100030: Tube_004
+    100032: Tube_005
+    100034: Tube_006
+    100036: Tube_01
+    100038: Vitre_contenant_01
+    400000: Barres_dessus_contenant_0
+    400002: Bouton_01
+    400004: Bouton_02
+    400006: Bouton_03
+    400008: Bouton_04
+    400010: Bouton_05
+    400012: Bouton_06
+    400014: //RootNode
+    400016: Contenant_01
+    400018: Ecran_contenant_01
+    400020: Lampes_contenant_01
+    400022: "M\xE9tal_noir_contenant_01"
+    400024: Pilliers_contenant_01
+    400026: Tube_002
+    400028: Tube_003
+    400030: Tube_004
+    400032: Tube_005
+    400034: Tube_006
+    400036: Tube_01
+    400038: Vitre_contenant_01
+    2100000: wire_000000000
+    2300000: Barres_dessus_contenant_0
+    2300002: Bouton_01
+    2300004: Bouton_02
+    2300006: Bouton_03
+    2300008: Bouton_04
+    2300010: Bouton_05
+    2300012: Bouton_06
+    2300014: Contenant_01
+    2300016: Ecran_contenant_01
+    2300018: Lampes_contenant_01
+    2300020: "M\xE9tal_noir_contenant_01"
+    2300022: Pilliers_contenant_01
+    2300024: Tube_002
+    2300026: Tube_003
+    2300028: Tube_004
+    2300030: Tube_005
+    2300032: Tube_006
+    2300034: Tube_01
+    2300036: Vitre_contenant_01
+    3300000: Barres_dessus_contenant_0
+    3300002: Bouton_01
+    3300004: Bouton_02
+    3300006: Bouton_03
+    3300008: Bouton_04
+    3300010: Bouton_05
+    3300012: Bouton_06
+    3300014: Contenant_01
+    3300016: Ecran_contenant_01
+    3300018: Lampes_contenant_01
+    3300020: "M\xE9tal_noir_contenant_01"
+    3300022: Pilliers_contenant_01
+    3300024: Tube_002
+    3300026: Tube_003
+    3300028: Tube_004
+    3300030: Tube_005
+    3300032: Tube_006
+    3300034: Tube_01
+    3300036: Vitre_contenant_01
+    4300000: Bouton_01
+    4300002: Bouton_02
+    4300004: Bouton_03
+    4300006: Bouton_04
+    4300008: Bouton_05
+    4300010: Bouton_06
+    4300012: Contenant_01
+    4300014: Ecran_contenant_01
+    4300016: Lampes_contenant_01
+    4300018: "M\xE9tal_noir_contenant_01"
+    4300020: Pilliers_contenant_01
+    4300022: Tube_01
+    4300024: Tube_002
+    4300026: Tube_003
+    4300028: Tube_004
+    4300030: Tube_005
+    4300032: Tube_006
+    4300034: Vitre_contenant_01
+    4300036: Barres_dessus_contenant_0
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
